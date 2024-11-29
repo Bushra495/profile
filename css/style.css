@@ -1,0 +1,126 @@
+html{
+    font-size: 90%;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
+    background: linear-gradient(-45deg, rgb(6, 39, 48),rgb(5, 3, 39),rgb(6, 39, 48),rgb(5, 3, 39));
+    background-size: 400% 400%;
+    animation: animate 3s infinite alternate;
+    color: antiquewhite;
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+        
+    }
+    100%{
+        background-position: 100% 100%;
+    }
+}
+
+.section{
+    max-height: 100vh;
+    margin: 5rem;
+    padding: 3rem;
+    scroll-snap-align: start;
+}
+
+.card{
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.card-title{
+    font-size: 2rem;
+}
+
+.card-text{
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.txt{
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.list-group-item{
+    font-size: 1.2rem;
+    padding: 2rem;
+    background-color: transparent;
+    color: antiquewhite;
+}
+
+.icon-container{
+    display: inline-flex;
+    padding: 3rem;
+    font-size: 2rem;
+}
+
+
+.fa-solid1{
+    padding: 2rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+    color:antiquewhite;
+}
+
+.fa-solid1:hover{
+    color: rgb(47, 59, 190);
+    transform: scale(1.3) translateY(0.5px);
+    background-color: rgb(207, 198, 198);
+    box-shadow: 0 0 25px; 
+}
+
+.fa-brands{
+    border-radius: 50%;
+    padding: 2rem;
+    transition: 0.3s ease;
+    color:antiquewhite;
+}
+
+.fa-brands:hover{
+    color: rgb(47, 59, 190);
+    transform: scale(1.3) translateY(0.5px);
+    background-color: rgb(207, 198, 198);
+    box-shadow: 0 0 25px; 
+}
+
+.typing{
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.typing span{
+    position:relative;
+}
+
+.typing span:before{
+    content: "RTS Cinema";
+    color: antiquewhite;
+    animation: words 20s infinite;
+}
+
+.typing span:after{
+    content: "";
+    background-color: black;
+    position: absolute;
+    width: calc(100%+8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid;
+    }
+}
+
